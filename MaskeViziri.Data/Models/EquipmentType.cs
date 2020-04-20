@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZastitneMaske.Data.Models
+namespace MaskeViziri.Data.Models
 {
     public enum EquipmentType
     {
-        PapirnaMaska,
-        KrpenaMaska,
-        Vizir
+        MaskeOdPapira,
+        MaskeOdTekstila,
+        Viziri
     }
 }

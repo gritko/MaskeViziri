@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ZastitneMaske.Data.Models;
+using MaskeViziri.Data.Models;
 
-namespace ZastitneMaske.Data.Services
+namespace MaskeViziri.Data.Services
 {
     public interface IEquipmentData
     {

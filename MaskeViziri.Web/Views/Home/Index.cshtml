@@ -1,6 +1,24 @@
-﻿@{
+﻿@model IEnumerable<MaskeViziri.Data.Models.ProtectionEquipment>
+@{
     ViewBag.Title = "Home Page";
 }
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Material Design for Bootstrap</title>
+<!-- MDB icon -->
+@*<link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">*@
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<!-- Google Fonts Roboto -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="~/Content/bootstrap.min.css">
+<!-- Material Design Bootstrap -->
+<link rel="stylesheet" href="~/Content/mdb.min.css">
+<!-- Your custom styles (optional) -->
+<link rel="stylesheet" href="~/Content/css/EquipmentSummary/style.css">
 
 @*Jumbotron section to introduce to product*@
 <section class="jumbotron text-center">
@@ -13,58 +31,63 @@
     </div>
 </section>
 
-<div class="row">
-    <div class="col-lg-4">
-        <div class="bs-component">
-            <div class="card mb-3">
-                <h3 class="card-header">Card header</h3>
-                <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/face-mask.jpg" alt="Card image">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-                <a href="#" class="btn btn-primary my-2">Poruci</a>
-            </div>
-        </div>
-    </div>
+@foreach (var item in Model)
+{
+    @Html.Partial("_EquipmentSummary", item)
+}
 
-    <div class="col-lg-4">
-        <div class="bs-component">
-            <div class="card mb-3">
-                <h3 class="card-header">Card header</h3>
-                <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/vizir.jpg" alt="Card image">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+@*<div class="row">
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="card mb-3">
+                    <h3 class="card-header">Jednokratne maske</h3>
+                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/face-mask.jpg" alt="Card image">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary my-2">Poruci</a>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-                <a href="#" class="btn btn-primary my-2">Poruci</a>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-4">
-        <div class="bs-component">
-            <div class="card mb-3">
-                <h3 class="card-header">Card header</h3>
-                <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/textilleMaskDesign.jpg" alt="Card image">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="card mb-3">
+                    <h3 class="card-header">Medicinski viziri</h3>
+                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/vizir.jpg" alt="Card image">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary my-2">Poruci</a>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-                <a href="#" class="btn btn-primary my-2">Poruci</a>
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="card mb-3">
+                    <h3 class="card-header">Maske od tekstila</h3>
+                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/textilleMaskDesign.jpg" alt="Card image">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary my-2">Poruci</a>
+                </div>
+            </div>
+        </div>
+    </div>*@
