@@ -142,7 +142,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MasksController.cs" />
+    <Compile Include="Controllers\PaperMasksController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -296,11 +296,11 @@
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Home\_EquipmentSummary.cshtml" />
+    <Content Include="Views\PaperMasks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Masks\" />
     <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>

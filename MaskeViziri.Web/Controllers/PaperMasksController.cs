@@ -7,18 +7,19 @@ using MaskeViziri.Data.Services;
 
 namespace MaskeViziri.Web.Controllers
 {
-    public class MasksController : Controller
+    public class PaperMasksController : Controller
     {
         IEquipmentData db;
 
-        public MasksController(IEquipmentData db)
+        public PaperMasksController(IEquipmentData db)
         {
             this.db = db;
         }
 
         // GET: Masks
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
+            var model = db.Get(id);
             return View();
         }
     }
