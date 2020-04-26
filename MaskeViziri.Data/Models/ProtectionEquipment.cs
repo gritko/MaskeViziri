@@ -11,7 +11,18 @@ namespace MaskeViziri.Data.Models
     {
         public int Id { get; set; }
         public EquipmentType Equipment { get; set; }
-        public int OrderQuantity { get; set; }
+
+        private double _price;
+
+        public double Price
+        {
+            get { return _price; }
+            //TODO Logika za postavljanje vrednosti
+            set { _price = value; }
+        }
+
+
+        //TODO Ovo ne treba ovde, prebaciti u helper ili zaobici ovaj pristup
         public string imgLoc { get; set; }
 
     }

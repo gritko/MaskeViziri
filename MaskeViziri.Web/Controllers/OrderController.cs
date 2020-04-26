@@ -17,9 +17,10 @@ namespace MaskeViziri.Web.Controllers
         }
 
         // GET: Order
-        public ActionResult Index()
+        public ActionResult PaperMasks(int id)
         {
-            return View();
+            var model = db.Get(id);
+            return View(model);
         }
     }
 }

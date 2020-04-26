@@ -7,7 +7,7 @@ using MaskeViziri.Data.Models;
 
 namespace MaskeViziri.Data.Services
 {
-    public class InMemoryEquipmentData : IEquipmentData
+    internal class InMemoryEquipmentData : IEquipmentData
     {
         List<ProtectionEquipment> equipmentList;
 
