@@ -48,10 +48,8 @@
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\ProtectionEquipment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IContactData.cs" />
     <Compile Include="Services\IEquipmentData.cs" />
     <Compile Include="Services\InMemoryEquipmentData.cs" />
-    <Compile Include="Services\InMemoryOrderData.cs" />
     <Compile Include="Services\IOrderdata.cs" />
     <Compile Include="Services\IOrderingMethod.cs" />
   </ItemGroup>
