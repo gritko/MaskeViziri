@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaskeViziri.Data.Models
+namespace MaskeViziri.Data.Services
 {
-    public enum EquipmentType
+    public interface ICart
     {
-        MaskeOdPapira,
-        MaskeOdTekstila,
-        Viziri
+        int Id { get; }
+
+        double Price { get; }
     }
 }

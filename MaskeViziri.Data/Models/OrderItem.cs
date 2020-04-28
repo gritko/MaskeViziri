@@ -1,16 +1,16 @@
 ﻿using MaskeViziri.Data.Services;
-
+//Mozda bi trebalo da budu u istom namespace-u zbog compile
 namespace MaskeViziri.Data.Models
 {
     public class OrderItem 
     {
-        private readonly double Discount;
-        private readonly double _price;
-
-        public string Name { get; set; }
         public int Id { get; set; }
-        public int Amount { get; set; }
+        public string Name { get; set; }
+        public double ItemPrice { get; set; }
+        private double Discount { get; set; }
 
+        // razmisliti jos jednom da li ovo da ostane ovde ili da bude u Cart class 
+        public int Amount { get; set; }
         public double Price
         {
             get
@@ -22,8 +22,18 @@ namespace MaskeViziri.Data.Models
 
         private double calculatePrice()
         {
-            return _price * Discount;
+            Price = (Price - (Price * Discount)) * Amount;
+            return Price;
 
+        }
+
+        public OrderItem(IProduct product, int amount, double discount = 1)
+        {
+            Name = product.Name;
+            ItemPrice = product.Price;
+            Amount = amount;
+            Discount = discount;
         }
     }
 }
+//  001 | PapirnaMaska | 2000 | 0.2 | 80 RSD

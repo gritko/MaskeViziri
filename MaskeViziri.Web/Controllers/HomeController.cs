@@ -17,7 +17,6 @@ namespace MaskeViziri.Web.Controllers
         }
         public ActionResult Index()
         {
-            Citam sve 
             var model = db.GetAll();
             return View(model);
         }

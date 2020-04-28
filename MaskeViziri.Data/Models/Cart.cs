@@ -28,9 +28,29 @@ namespace MaskeViziri.Data.Models
             OrderItems.Add(item);
             Price += item.Price;
         }
+        
+        private void Remove(OrderItem item)
+        {
+            OrderItems.Remove(item);
+            Price -= item.Price;
+        }
+        
+        private void RemoveAll(OrderItem item)
+        {
+            OrderItems.Clear();
+            OrderItems.TrimExcess();
+            Price = default;
+        }
+        private void RemoveAll(HashSet<OrderItem> OrderItems)
+        {
+            foreach (OrderItem item in OrderItems)
+            {
+                Remove(item);
+            }
+        }
 
 
-        //TODO Add remove and removeAll methods
+        // methods for placing an order        
         // 41 | (Papirne maske, Viziri, Hirurske maske) | 1499
 
     }

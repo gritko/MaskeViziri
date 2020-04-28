@@ -31,8 +31,8 @@
     </div>
 </section>
 
-
-@Html.Partial("_EquipmentSummary", item)
+@foreach (var item in Model) {
+@Html.Partial("_EquipmentSummary", item)}
 
 @*<div class="row">
         <div class="col-lg-4">

@@ -7,23 +7,19 @@ using MaskeViziri.Data.Models;
 
 namespace MaskeViziri.Data.Models
 {
-    public class ProtectionEquipment
+    public class Product
     {
         public int Id { get; set; }
-        public EquipmentType Equipment { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
         private double _price;
 
         public double Price
         {
-            get { return _price; }
+            get => _price;
             //TODO Logika za postavljanje vrednosti
             set { _price = value; }
         }
-
-
-        //TODO Ovo ne treba ovde, prebaciti u helper ili zaobici ovaj pristup
-        public string imgLoc { get; set; }
-
     }
 }
