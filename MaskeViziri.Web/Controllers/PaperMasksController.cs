@@ -9,9 +9,9 @@ namespace MaskeViziri.Web.Controllers
 {
     public class PaperMasksController : Controller
     {
-        IEquipmentData db;
+        IProductData db;
 
-        public PaperMasksController(IEquipmentData db)
+        public PaperMasksController(IProductData db)
         {
             this.db = db;
         }

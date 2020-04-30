@@ -7,23 +7,25 @@ using MaskeViziri.Data.Models;
 
 namespace MaskeViziri.Data.Services
 {
-    public class InMemoryEquipmentData : IEquipmentData
+    // ToDo
+    // class for testing purposes
+    public class InMemoryEquipmentData : IProductData
     {
-        List<Product> equipmentList;
+        List<Product> productList;
 
         public InMemoryEquipmentData()
         {
-            equipmentList = new List<Product>()
+            productList = new List<Product>()
             {
-                new Product { Id = 1, Equipment = EquipmentType.MaskeOdPapira, imgLoc = "face-mask.jpg" },
-                new Product { Id = 2, Equipment = EquipmentType.MaskeOdTekstila, imgLoc = "textilleMaskDesign.jpg" },
-                new Product { Id = 3, Equipment = EquipmentType.Viziri, imgLoc = "vizir.jpg" }
+                new Product { Id = 1, Name = "Papirne maske", Price = 60.00 },
+                new Product { Id = 2, Name = "Tekstilne maske", Price = 120.00},
+                new Product { Id = 3, Name = "Viziri", Price = 500.00},
             };
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return equipmentList.OrderBy(e => e.Id);
+            return productList.OrderBy(e => e.Id);
         }
 
         //public void AddCount(ProtectionEquipment equipment)
@@ -36,7 +38,7 @@ namespace MaskeViziri.Data.Services
         //}
         public Product Get(int id)
         {
-            return equipmentList.FirstOrDefault(e => e.Id == id);
+            return productList.FirstOrDefault(e => e.Id == id);
         }
     }
 }

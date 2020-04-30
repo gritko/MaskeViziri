@@ -9,9 +9,9 @@ namespace MaskeViziri.Web.Controllers
 {
     public class CartController : Controller
     {
-        IEquipmentData db;
+        IProductData db;
 
-        public CartController(IEquipmentData db)
+        public CartController(IProductData db)
         {
             this.db = db;
         }

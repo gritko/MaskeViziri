@@ -50,6 +50,7 @@
     <Compile Include="Services\ICart.cs" />
     <Compile Include="Services\IContact.cs" />
     <Compile Include="Services\IEquipmentData.cs" />
+    <Compile Include="Services\InMemoryCartData.cs" />
     <Compile Include="Services\InMemoryEquipmentData.cs" />
     <Compile Include="Services\IOrderdata.cs" />
     <Compile Include="Services\IOrderingMethod.cs" />

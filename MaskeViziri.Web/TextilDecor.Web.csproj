@@ -157,15 +157,15 @@
     <Content Include="Content\css\Cart\cart.css" />
     <Content Include="Content\css\Checkout\checkout.css" />
     <Content Include="Content\css\EquipmentSummary\style.css" />
+    <Content Include="Content\Images\paperMask.jpg" />
     <Content Include="Content\mdb.css" />
     <Content Include="Content\mdb.min.css" />
-    <Content Include="Images\face-mask.jpg" />
-    <Content Include="Images\textilleMaskDesign.jpg" />
-    <Content Include="Images\vizir.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\textilleMask.jpg" />
+    <Content Include="Content\Images\vizir.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -295,7 +295,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
-    <Content Include="Views\Home\_EquipmentSummary.cshtml" />
+    <Content Include="Views\Home\_ProductSummary.cshtml" />
     <Content Include="Views\PaperMasks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -315,9 +315,9 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MaskeViziri.Data\MaskeViziri.Data.csproj">
+    <ProjectReference Include="..\MaskeViziri.Data\TextilDecor.Data.csproj">
       <Project>{492E4898-CFC2-41C6-A78A-F17F18A5BF07}</Project>
-      <Name>MaskeViziri.Data</Name>
+      <Name>TextilDecor.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

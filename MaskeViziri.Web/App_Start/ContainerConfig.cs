@@ -16,7 +16,10 @@ namespace MaskeViziri.Web
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             builder.RegisterType<InMemoryEquipmentData>()
-                .As<IEquipmentData>()
+                .As<IProduct>()
+                .SingleInstance();
+            builder.RegisterType<InMemoryCartData>()
+                .As<ICart>()
                 .SingleInstance();
 
             var container = builder.Build();

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MaskeViziri.Data.Models.ProtectionEquipment>
+﻿@model IEnumerable<MaskeViziri.Data.Models.Product>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -31,18 +31,12 @@
     </div>
 </section>
 
-@foreach (var item in Model) {
-@Html.Partial("_EquipmentSummary", item)}
-
-@*<div class="row">
+<div class="row">
         <div class="col-lg-4">
             <div class="bs-component">
                 <div class="card mb-3">
-                    <h3 class="card-header">Jednokratne maske</h3>
-                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/face-mask.jpg" alt="Card image">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
+                    <h3 class="card-header">Papirne maske</h3>
+                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/paperMask.jpg" alt="Card image">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Cras justo odio</li>
                         <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -56,11 +50,23 @@
         <div class="col-lg-4">
             <div class="bs-component">
                 <div class="card mb-3">
-                    <h3 class="card-header">Medicinski viziri</h3>
+                    <h3 class="card-header">Tekstilne maske</h3>
+                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/textilleMask.jpg" alt="Card image">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary my-2">Poruci</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="card mb-3">
+                    <h3 class="card-header">Viziri</h3>
                     <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/vizir.jpg" alt="Card image">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Cras justo odio</li>
                         <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -70,22 +76,4 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-4">
-            <div class="bs-component">
-                <div class="card mb-3">
-                    <h3 class="card-header">Maske od tekstila</h3>
-                    <img style="height: 300px; width: 100%; display: block;" src="~/Content/Images/textilleMaskDesign.jpg" alt="Card image">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary my-2">Poruci</a>
-                </div>
-            </div>
-        </div>
-    </div>*@
+    </div>

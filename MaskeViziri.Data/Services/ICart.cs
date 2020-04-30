@@ -9,7 +9,6 @@ namespace MaskeViziri.Data.Services
     public interface ICart
     {
         int Id { get; }
-
         double Price { get; }
     }
 }
