@@ -19,7 +19,7 @@ namespace TextilDecor.Data.Models
         public int PhoneNumber { get; set; }
         public int AlternativePhoneNumber { get; set; }
 
-        public Order(ICart cart, IContact contact)
+        public Order(Cart cart, Contact contact)
         {
             CartId                 = cart.Id;
             Price                  = cart.Price;

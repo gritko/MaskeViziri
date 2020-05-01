@@ -9,9 +9,9 @@ namespace TextilDecor.Web.Controllers
 {
     public class HomeController : Controller
     {
-        IProductData db;
+        IProduct db;
 
-        public HomeController(IProductData db)
+        public HomeController(IProduct db)
         {
             this.db = db;
         }

@@ -7,19 +7,18 @@ using TextilDecor.Data.Services;
 
 namespace TextilDecor.Web.Controllers
 {
-    public class PaperMasksController : Controller
+    public class ProductController : Controller
     {
-        IProductData db;
+        IProduct db;
 
-        public PaperMasksController(IProductData db)
+        public ProductController(IProduct db)
         {
             this.db = db;
         }
 
-        // GET: Masks
-        public ActionResult Index(int id)
+        // GET: Product
+        public ActionResult Index()
         {
-            var model = db.Get(id);
             return View();
         }
     }

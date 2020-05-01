@@ -9,12 +9,11 @@ namespace TextilDecor.Data.Services
 {
     public interface IProduct
     {
-        string Name { get; set; }
-        double Price { get; set; }
-
         //ToDo
         //Just for the testing purposes
         IEnumerable<Product> GetAll();
         Product Get(int id);
+        void Add(Product product);
+        void Update(Product product);
     }
 }

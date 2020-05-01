@@ -15,12 +15,10 @@ namespace TextilDecor.Web
         {
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterType<InMemoryEquipmentData>()
+            builder.RegisterType<SQLProductData>()
                 .As<IProduct>()
-                .SingleInstance();
-            builder.RegisterType<InMemoryCartData>()
-                .As<ICart>()
-                .SingleInstance();
+                .InstancePerRequest();
+            builder.RegisterType<ProductDbContext>().InstancePerRequest();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

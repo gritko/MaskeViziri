@@ -23,6 +23,12 @@ namespace TextilDecor.Data.Models
             }
         }
 
+        public Cart(int id, HashSet<OrderItem> items)
+        {
+            Id = id;
+            OrderItems = items;
+        }
+
         private void Add(OrderItem item)
         {
             OrderItems.Add(item);
@@ -41,13 +47,13 @@ namespace TextilDecor.Data.Models
             OrderItems.TrimExcess();
             Price = default;
         }
-        private void RemoveAll(HashSet<OrderItem> OrderItems)
-        {
-            foreach (OrderItem item in OrderItems)
-            {
-                Remove(item);
-            }
-        }
+        //private void RemoveAll(HashSet<OrderItem> OrderItems)
+        //{
+        //    foreach (OrderItem item in OrderItems)
+        //    {
+        //        Remove(item);
+        //    }
+        //}
 
 
 

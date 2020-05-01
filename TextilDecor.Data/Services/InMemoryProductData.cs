@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TextilDecor.Data.Models;
 
 namespace TextilDecor.Data.Services
 {
     // ToDo
     // class for testing purposes
-    public class InMemoryEquipmentData : IProductData
+    public class InMemoryProductData
     {
         List<Product> productList;
 
-        public InMemoryEquipmentData()
+        public InMemoryProductData()
         {
             productList = new List<Product>()
             {

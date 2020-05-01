@@ -9,30 +9,20 @@ namespace TextilDecor.Data.Services
 {
     public class InMemoryCartData
     {
-        IProduct db;
-        public InMemoryCartData(IProduct db)
-        {
-            this.db = db;
-        }
 
-        List<OrderItem> cartList;
-        
-        IProduct product = db.Get(1);
+        Cart cart;
+        //HashSet<OrderItem> cartList;
+        HashSet<OrderItem> cartList = new HashSet<OrderItem>()
+            {
+                new OrderItem { Id = 22, ProductId = 1, Name = "Papirne maske", Price = 60.00, Amount = 200 },
+                new OrderItem { Id = 23, ProductId = 2, Name = "Textilne maske", Price = 120.00, Amount = 100 },
+                new OrderItem { Id = 24, ProductId = 3, Name = "Viziri", Price = 300.00, Amount = 30 },
+            };
         public InMemoryCartData()
         {
-            cartList = new List<OrderItem>()
-            {
-                //public OrderItem(IProduct product, int amount, double discount = 1)
-                new OrderItem { product = new Product { Id = 1, Name = "Papirne maske", Price = 60.00 }, Amount = 1200 },
-                new OrderItem { Amount = 55 },
-                new OrderItem { Amount = 3 } 
-            };
+            cart = new Cart(222, cartList);
         }
-
-        public IEnumerable<Product> GetAll()
-        {
-            return cartList.OrderBy(e => e.Id);
-        }
+        
 
         //public void AddCount(ProtectionEquipment equipment)
         //{
@@ -42,10 +32,9 @@ namespace TextilDecor.Data.Services
         //        equipmentType.OrderQuantity += 1;
         //    }
         //}
-        public Product Get(int id)
+        public Cart Get(int id)
         {
-            return cartList.FirstOrDefault(e => e.Id == id);
+            return cart;
         }
     }
-}
 }
